@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&family=Nunito+Sans:opsz@6..12&family=Poppins:wght@300&display=swap');@import url('https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500&family=Nunito+Sans:opsz@6..12&family=Poppins&display=swap');
+
+
+:root{
+    --body-color: #3b0570;  
+    --button-color:rgb(231, 39, 77) ;
+    --tweet-color:#1D9BF0;
+    --text-color:white;
+    --signupdiv-color:white;
+};
+
+/* Universal selector */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;  
+}
+
+html body{
+    
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--body-color);
+
+}
+.container{
+    max-width: 1180px;
+    margin-inline: auto;
+    padding-inline: 2rem;
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+}
+
+/* 1) Navbar stylling start */
+.container a{
+    color: var(--text-color);
+    text-decoration: none;
+   
+}
+.navbar li{
+    list-style-type: none;
+}
+.navbar{
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.navlink ul{
+    justify-content: end;
+    gap: 30px;
+}
+.logo{
+    font-size: 2.1rem;
+    font-weight: 500;   
+}
+.hoverlink:hover{
+    color: var(--tweet-color);
+    transition: 0.4s ease-in-out;
+}
+.btn1{
+    background-color: var(--button-color);
+    border-radius: 19px;
+    padding:6px 20px;  
+}
+.btn1:hover{
+    background-color: var(--tweet-color);
+    transition: 0.5s ease-in-out;
+}
+ 
+.navlink .code{
+    color: gray;
+}
+.navbar #menu{
+    font-size: 2rem;
+    display: none;
+}
+
+/* 2)Header section Style start */
+
+.header_section{
+    padding-top: 45px;
+    justify-content: center;
+    gap: 100px;
+}
+
+.header_section .header_left{
+    color: var(--text-color);
+
+}
+.header_section .header_left h1{
+    font-size: 3rem;
+    line-height: 4rem;
+}
+.header_section .header_left p{
+    letter-spacing: 1px;
+    line-height: 1.7rem;
+}
+
+.header_section .btn2{
+    background-color: var(--button-color);
+    color: var(--text-color);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 25px;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+}
+
+ .header_section .form{
+    height:30rem ;
+    width:25rem ;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    text-align: center;
+    padding:20px 70px ;
+ }
+ .header_section .form h2{
+    font-size: 2.3rem ;
+ }
+
+ .header_section .form .line{
+    color: gray;
+    position: relative;
+ }
+
+.header_section .form .line::before{
+ content:"" ;
+ width: 40%;
+ height: 1px;
+ display: block;
+ background-color: gray;
+ position: absolute;
+ top: 50%;
+ left: 0;
+ 
+}
+.header_section .form .line::after{
+    content:"" ;
+    width: 40%;
+    height: 1px;
+    display: block;
+    background-color: gray;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    
+   }
+   .header_section .form #check:checked{
+          accent-color: rgb(6, 241, 135);
+
+   }
+
+   .header_section .form span{
+    color: rgb(13, 235, 135); 
+    font-weight: 700;
+   }
+
+   .header_section .form .fleid{
+     width: 80%;
+     height: 7%;
+     margin-bottom: 1.2rem;
+     font-family: 'Poppins', sans-serif ;
+     border: none;
+     border-radius: 2rem;
+     border: 1px solid grey;
+     padding-left: 1rem;
+      
+   }
+   .header_section .form #check{
+    width: 4%;
+    height: 3%;
+  
+   }
+   .header_section .form label{
+    color: grey;
+    font-size: 0.9rem;
+   
+    
+   }
+
+   .header_section .form .sign_btn{
+    width: 80%;
+    height: 9%;
+    background-color: var(--body-color);
+    font-family:'Poppins', sans-serif ;
+    color: var(--text-color) ;
+    margin-top: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+
+   }
+
+   .header_section .form .twitter_btn{
+    width: 80%;
+    height: 9%;
+    background-color: var(--tweet-color);
+    font-family:'Poppins', sans-serif ;
+    color: var(--text-color) ;
+   margin-bottom: 1rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 20px;
+   }
+
+   .header_section .form p{
+    color: grey;
+    letter-spacing:1px
+   }
+
+
+
+   /* Media Queries */
+
+   /* Responsive code */
+
+
+@media (max-width:991px) {
+
+    .header_section h1{
+        font-size: 2.5rem;
+        line-height: 3.5rem;
+    }
+    .header_section .form{
+        width: 22rem;
+        height: 30rem;
+    }
+    .header_section{
+        padding-top: 40px; 
+       gap: 50px;
+    }
+    .header_section .header_left p{
+        letter-spacing: 1px;
+        line-height: 1.5rem;
+        font-size: 0.8rem;
+    }
+    .header_section .btn2{
+        margin-top: 1.5rem;
+    }
+    
+}
+
+@media (max-width:893px) {
+    .header_section .form{
+        width: 20rem;
+        height: 30rem;
+    }
+    .header_section{
+       gap: 40px;
+    }
+    
+}
+
+@media (max-width:769px) {
+    .header_section{
+        flex-direction: column;
+        justify-content: center;
+    }
+    .header_section .header_left h1{
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center;    
+    }
+    .header_section .header_left p{
+        letter-spacing: 1px;
+        line-height: 1.9rem;
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .header_section .btn2{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .header_section .form{
+        width: 70vw;
+        height: 30rem;
+        margin-top: 50px;
+    }
+    .navbar .hoverlink{
+        display: none;
+    }
+    .navbar #menu{
+        display: block;
+        z-index: 50;
+       
+    }
+}
+
+@media (max-width:425px) {
+    .header_section{
+        overflow: hidden;
+    }
+    .header_section .form{
+        width: 100vw;
+        height: 30rem;
+       
+    }
+    .header_section .btn2{
+        width: 100%;
+        margin-top: 30px;
+    }
+    .header_section .header_left h1{
+        font-size: 3rem;
+        line-height: 4rem;
+        text-align: center;    
+    }
+   .navbar .logo{
+        font-size: 1.5rem;
+    }
+    .navbar{
+        margin-top: 1rem;
+    }
+    
+}
+   
